@@ -116,6 +116,7 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     os (0.9.6)
+    pg (0.19.0)
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (1.6.8)
@@ -220,6 +221,7 @@ DEPENDENCIES
   googleauth
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   puma
   rails (= 4.2.1)
   rest-client

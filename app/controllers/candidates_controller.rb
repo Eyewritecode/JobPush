@@ -31,6 +31,7 @@ class CandidatesController < ApplicationController
       @status = "NO NEW CANDIDATE"
     end
     @@rows = @number_of_rows
+    redirect_to action: 'index'
   end
 
 private
