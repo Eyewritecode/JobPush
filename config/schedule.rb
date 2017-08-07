@@ -18,6 +18,3 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 5.minutes do
-	rake 'call_talkpush_api'
-end
