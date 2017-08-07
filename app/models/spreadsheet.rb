@@ -18,16 +18,20 @@ class Spreadsheet < ActiveRecord::Base
     worksheet.num_cols
   end
 
-  def self.check_new_record
-    if @@rows < get_rows
-      (@@rows+1..get_rows).each do |row|
-        (1..get_cols).each do |col|
-          return worksheet[row, col]
-        end
-      end
+  def self.new_candidate?
+    if get_rows > @@rows
+      true
     else
-      return "no new record"
+      false
     end
-    @@rows = get_rows
+  end
+
+  def self.get_candidate_info
+    candidates = (get_rows - @@rows)
+    return candidates
+    # ws = worksheet
+    # (1..get_cols).each do |col|
+    #   return ws[@@rows, col]
+    # end
   end
 end

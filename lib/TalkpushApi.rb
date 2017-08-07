@@ -12,7 +12,6 @@ class TalkpushApi
   end
     
   def add_candidate(candidate)
-    puts Rails.application.secrets.TALKPUSH_KEY
     response = RestClient.post "#{@url}/#{@campaign_id}/campaign_invitations", {api_key: self.key, api_secret: self.secret, campaign_invitation: candidate}
     
     if response.code == 200
