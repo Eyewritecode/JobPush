@@ -1,6 +1,5 @@
 class CandidatesController < ApplicationController
   
-  require 'rest-client'
   require 'TalkpushApi'
 
   @@rows = 1
